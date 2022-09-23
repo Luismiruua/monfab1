@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <title>Formulario</title>
+        <header>
+            <h1>Formulario sobre la Inteligencia Artificial en hogares</h1>
+        </header>
+        <main>
+            <nav>
+                <h2>ÍNDICE</h2>
+                <a href="index.html">Formulario</a>
+                <a href="tabla.html">Tabla</a>
+                <a href="video.html">Video</a>
+                <a href="opinion.html">Opinion</a>
+                <a href="info.html">informacíon</a>
+            </nav>
+            <form class="Formulario">
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <img src="./img/usuario.jpg" width="600" height="480">
+                    <p>Nombre: <input type="text" name="nombre" id="nombre" placeholder="Nombre SegundoNombre"></p>
+                    <P>Apellido: <input type="text" name="apellido" id="apell" placeholder="Apellido"></P>
+                    <p>Pasaporte: <input type="pasaporte" name="pasaporte" id="pasaporte" maxlength="9" minlength="9" placeholder="ZUS983456"></p>
+                </fieldset>
+                <br>
+                <div>
+                    <legend>Selecciona la edad</legend>
+                    <input type="radio" id="edad" name="year" value="menores-de-edad">
+                    <label for="entre18-35">Menos de 18</label>
+                    <input type="radio" id="edad" name="year" value="entre18-35">
+                    <label for="entre18-35">Entre 18 y 35 años</label>
+                    <input type="radio" id="edad" name="year" value="entre36-53">
+                    <label for="entre18-35">Entre 36 y 53 años</label>
+                    <input type="radio" id="edad" name="year" value="entre54-65">
+                    <label for="entre18-35">Entre 54 y 65 años</label>
+                    <input type="radio" id="edad" name="year" value="entre">
+                    <label for="entre18-35">Mayores de 65</label>
+                </div>
+                <br>
+                <label>
+                    <legend>Situación laboral</legend>
+                    <input type="checkbox" id="estud" value="estud"> Estudiando</label>
+                    <input type="checkbox" id="trabaj" value="trabaj"> Trabajando</label>
+                    <input type="checkbox" id="otro" value="otro"> Otro</label>
+                </label>
+                <br>
+                <input type="submit" value="Enviar datos">
+            </form>
+
+        </main>
+        
+    </body>
+
+
+
+</html>
