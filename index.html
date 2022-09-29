@@ -25,29 +25,21 @@
                     <img src="./img/usuario.jpg" width="600" height="480">
                     <p>Nombre: <input type="text" name="nombre" id="nombre" placeholder="Nombre SegundoNombre"></p>
                     <P>Apellido: <input type="text" name="apellido" id="apell" placeholder="Apellido"></P>
-                    <p>Pasaporte: <input type="pasaporte" name="pasaporte" id="pasaporte" maxlength="9" minlength="9" placeholder="ZUS983456"></p>
+                    <p>Pasaporte: <input type="text" name="pasaporte" id="pasaporte" maxlength="9" minlength="9" placeholder="ZUS983456"></p>
                 </fieldset>
                 <br>
-                <div>
-                    <legend>Selecciona la edad</legend>
-                    <input type="radio" id="edad" name="year" value="menores-de-edad">
-                    <label for="entre18-35">Menos de 18</label>
-                    <input type="radio" id="edad" name="year" value="entre18-35">
-                    <label for="entre18-35">Entre 18 y 35 años</label>
-                    <input type="radio" id="edad" name="year" value="entre36-53">
-                    <label for="entre18-35">Entre 36 y 53 años</label>
-                    <input type="radio" id="edad" name="year" value="entre54-65">
-                    <label for="entre18-35">Entre 54 y 65 años</label>
-                    <input type="radio" id="edad" name="year" value="entre">
-                    <label for="entre18-35">Mayores de 65</label>
-                </div>
-                <br>
-                <label>
-                    <legend>Situación laboral</legend>
-                    <input type="checkbox" id="estud" value="estud"> Estudiando</label>
-                    <input type="checkbox" id="trabaj" value="trabaj"> Trabajando</label>
-                    <input type="checkbox" id="otro" value="otro"> Otro</label>
+                <label for="checkb">
+                    <input type="checkbox">Activo
+                    <input type="checkbox">Inactivo
                 </label>
+                <div>
+                    <label for="r1">
+                        <input type="radio" name="prioridad">Alta
+                        <input type="radio" name="prioridad">Media
+                        <input type="radio" name="prioridad">Baja
+                    </label>
+
+                </div>
                 <br>
                 <input type="submit" value="Enviar datos">
             </form>
