@@ -1,10 +1,10 @@
 <?php
     class Element{
-        private $nombre = "";
-        private $descripcion = "";
-        private $numSerie = "";
-        private $estado = "";
-        private $prioridad = "";
+        public $nombre = "";
+        public $descripcion = "";
+        public $numSerie = "";
+        public $estado = "";
+        public $prioridad = "";
 
         function __construct($nombre, $descripcion, $numSerie, $estado, $prioridad){
             $this->nombre = $nombre;

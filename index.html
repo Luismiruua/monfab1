@@ -21,29 +21,28 @@
                     <li><a href="index.html">Principal</a></li>
                 </ul>                
             </nav>
-            <form class="Formulario">
+            <form class="Formulario" action="./ws/createElement.php" method="post">
                 <fieldset>
                     <legend>Datos</legend>
                     <img src="./img/usuario.jpg" width="600" height="480">
                     <p>Nombre: <input type="text" name="nombre" id="nombre" placeholder="Nombre"></p>
-                    <P>Descripción del producto: <input type="textbox" name="apellido" id="apell" placeholder="Descripcion del producto"></p>
-                    <p>Numero de serie: <input type="text" name="pasaporte" id="serie" placeholder="5575983456"></p>
+                    <P>Descripción del producto: <input type="textbox" name="descripcion" id="descripcion" placeholder="Descripcion del producto"></p>
+                    <p>Numero de serie: <input type="number" name="serie" id="serie" placeholder="5575983456"></p>
                 </fieldset>
                 <br>
                 <label for="checkb">
-                    <input type="checkbox">Activo
-                    <input type="checkbox">Inactivo
+                    <input type="checkbox" name="estados">Activo
                 </label>
                 <div>
-                    <label for="r1">
+                    <label for="r1" multiple="no">
                         <input type="radio" name="prioridad">Alta
-                        <input type="radio" name="prioridad">Media
-                        <input type="radio" name="prioridad">Baja
+                        <input type="radio" name="prioridad2">Media
+                        <input type="radio" name="prioridad3">Baja
                     </label>
 
                 </div>
                 <br>
-                <input type="submit" value="Enviar datos">
+                <input type="submit" name="enviar" value="Enviar datos">
             </form>
 
         </main>
