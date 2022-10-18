@@ -1,0 +1,84 @@
+Array
+(
+    [nombre] => tgewgwe
+    [descripcion] => sisii
+    [numero de serie] => 32532523
+    [estado] => Activo
+    [prioridad] => Media
+)
+Array
+(
+    [nombre] => tgewgwe
+    [descripcion] => sisii
+    [numero de serie] => 32532523
+    [estado] => Activo
+    [prioridad] => Media
+)
+tgewgwesisii32532523ActivoMediaArray
+(
+    [nombre] => luis
+    [descripcion] => manin
+    [numero de serie] => 64874487
+    [estado] => Activo
+    [prioridad] => Media
+)
+luismanin64874487ActivoMedia
+
+Array
+(
+    [nombre] => el diablo
+    [descripcion] => vamooooo
+    [numero de serie] => 4212452523
+    [estado] => Activo
+    [prioridad] => Alta
+)
+el diablovamooooo4212452523ActivoAltaArray
+(
+    [nombre] => gwegweg
+    [descripcion] => wggwgw
+    [numero de serie] => 453252
+    [estado] => Activo
+    [prioridad] => Media
+)
+gwegwegwggwgw453252ActivoMediaArray
+(
+    [nombre ] => luis
+    [ descripcion] => lorca
+    [ numero de serie] => 6845474
+    [ estado] => 
+    [ prioridad] => 
+)
+Array
+(
+    [nombre ] => luis
+    [ descripcion] => lorca
+    [ numero de serie] => 6845474
+    [ estado] => Activo
+    [ prioridad] => Media
+)
+Array
+(
+    [nombre ] => luis
+    [ descripcion] => lorca
+    [ numero de serie] => 6845474
+    [ estado] => Activo
+    [ prioridad] => Media
+)
+luislorca6845474ActivoMediaArray
+(
+    [nombre ] => luis
+    [ descripcion] => muy bueno
+    [ numero de serie] => 
+    [ estado] => Activo
+    [ prioridad] => Alta
+)
+luismuy buenoActivoAlta
+
+Array(
+    [nombre ] => luis
+    [ descripcion] => muy bueno
+    [ numero de serie] => 425252332
+    [ estado] => Activo
+    [ prioridad] => Alta
+)
+luismuy bueno425252332ActivoAlta
