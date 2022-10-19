@@ -4,24 +4,15 @@
     if(isset($_POST["enviar"])){
     
         $nombre = $_POST["nombre"];        
-        echo $nombre;
-        echo "<br>";
 
         $descripcion = $_POST["descripcion"];
-        echo $descripcion;
-        echo "<br>";
 
         $numSerie = $_POST["serie"];
-        echo $numSerie;
-        echo "<br>";
+
 
         $estado = $_POST["estados"];
-        echo $estado;
-        echo "<br>";
 
         $prioridad = $_POST["prioridad"];
-        echo $prioridad;
-        echo "<br>";
 
     } 
     
