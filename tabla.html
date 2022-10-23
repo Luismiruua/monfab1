@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
     <body>
         <title>Formulario</title>
         <header>
@@ -22,30 +24,13 @@
                 </ul>                
             </nav>
             <br>
-            <table class="default" border="1" >
-                <tr>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>>Número de serie</th>
-                    <th>Estado</th>
-                    <th>Prioridad</th>
-                </tr>
-                <tr>
-                    <td>Dispositivio IA 13</td>
-                    <td>Se conecta autómitacamente con el telefono movil</td>
-                    <td>342352432242682</td>
-                    <td>Activo</td>
-                    <td>Alta</td>
-                </tr>
-                <tr>
-                    <td>Dispositivio IA 215</td>
-                    <td>Activa una cámara y graba si hay algun problema</td>
-                    <td>784598214575577</td>
-                    <td>Inactivo</td>
-                    <td>Baja</td>
-                </tr>
+            <section id="filtro" onsubmit="filtrar()">
+                <input type="search" id="buscar" onkeyup="mostr()" onkeypress="return (event.charCode >=65 && event.charCode <= 122 || event.charCode == 32)" placeholder="Enviar" ><input type="button" id="env" value="Enviar" onclick="validar()">
+                <table id="tablaDts" border="1">
+                </table>
+                <script src="./js/script.js"></script>
+            </section>
 
-            </table>
         </main>
     </body>
 </html>
