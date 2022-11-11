@@ -81,4 +81,27 @@ Array(
     [ estado] => Activo
     [ prioridad] => Alta
 )
-luismuy bueno425252332ActivoAlta
+luismuy bueno425252332ActivoAltaArray
+(
+    [nombre ] => fqqwf
+    [ descripcion] => gwegewg
+    [ numero de serie] => 4215215
+    [ estado] => Activo
+    [ prioridad] => Media
+)
+fqqwfgwegewg4215215ActivoMediaArray
+(
+    [nombre ] => 
+    [ descripcion] => 
+    [ numero de serie] => 
+    [ estado] => 
+    [ prioridad] => 
+)
+Array
+(
+    [nombre ] => 
+    [ descripcion] => 
+    [ numero de serie] => 
+    [ estado] => 
+    [ prioridad] => 
+)
