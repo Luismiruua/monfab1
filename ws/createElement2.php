@@ -2,30 +2,93 @@
     include "./models/element.php";
     include "./conexion.php";
 
-    $atrb = $pdo->prepare("INSERT INTO elementos (nombre, descripcion, serie, estados, prioridad) VALUES(:nombre, :descripcion, :numSerie, :estado, :prioridad)");
+    $nombre = $_POST['nombre'];
+    $descripcion = $_POST['descripcion'];
+    $numSerie = $_POST['serie'];
+    $estado = $_POST['estado']='on';
+    $prioridad = $_POST['prioridad'];
+    
 
-    $atrb->bindParam(nombre, $nombre);
-    $atrb->bindParam(descripcion, $descripcion);
-    $atrb->bindParam(serie, $numSerie);
-    $atrb->bindParam(estado, $estado);
-    $atrb->bindParam(prioridad, $prioridad);
+    try{
+
+        $query = "INSERT INTO elementos (nombre, descripcion, nserie, estado, prioridad) 
+        VALUES(:nombre, :descripcion, :serie, :estado, :prioridad)"; 
+        $sentencia = $pdo->prepare($query);
+        $sentencia->execute(array(
+            ":nombre"=>$nombre, 
+            ":descripcion"=>$descripcion, 
+            ":serie"=>$numSerie, 
+            "estado"=>$estado,
+            "prioridad"=>$prioridad
+        ));
+        echo "El registro se ha insertado capo";
 
 
+    }catch(PDOExcepction $e){
+        echo 'Fallo la inserccion capo';
+    }
+   
+
+
+
+            
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     /*
-    $nombre =   isset($_POST["nombre"]);     
-    $descripcion = isset($_POST["descripcion"]);
-    $numSerie = isset($_POST["serie"]);
-    $estado = isset($_POST["estados"]);
-    $prioridad = isset($_POST["prioridad"]);*/
-    /*
-    $sentencia = $pdo->prepare("INSERT INTO elementos (nombre, descripcion, serie, estados, prioridad) VALUES(:nombre, :descripcion, :numSerie, :estado, :prioridad)");
-    $result = $sentencia->execute([:nombre, :descripcion, :numSerie, :estado, :prioridad])
-    */
-    /*if($resultado === TRUE){
-        echo "Insertado correctamente";
+    $sentencia->execute();
+    print_r($respuesta);
+
+    
+    $sentencia = $pdo->prepare($query);
+    
+    
+    
+
+    $result = $sentencia->execute();
+
+    if($result>0){
+        $data['success'] = true;
+        $data['message'] = "El producto se ha creado perfectamente capo";  
+        $data['id'] = $result;
     }else{
-       echo "Algo salió mal. Por favor verifica que la tabla exista"; 
-    } */
+        $data['success'] = false;
+        $data['message'] = 'Error en la creación del producto, (';
+    }
+    $respuesta = $sentencia->fetchAll(PDOFETCH_ASSOC);
+    print_r($respuesta);
 
 
-?>
+/*
+    /*VALUES (nombre, descripcion, numSerie, estado, prioridad)";
+
+    if ($sentencia->execute()) {
+        echo "Nuevos sente$sentenciautos creados";
+      } else {
+        echo "No se pudieron crear capito";
+    }
+*/
+
