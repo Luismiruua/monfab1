@@ -7,13 +7,24 @@
     $numSerie = $_POST['serie'];
     $estado = $_POST['estado']='on';
     $prioridad = $_POST['prioridad'];
-    
+    $success = true;
+    $message = 'Se ha podido agregar perfectamente';
 
+    $patata = ["success" => $success, "message" => $message, 
+    "data" => [
+        "nombre" => $nombre,
+        "descripcion" =>$descripcion,
+        "nserie" => $numSerie,
+        "estado" => $estado,
+        "prioridad" => $prioridad  
+    ]];
+        
     try{
-
+        
         $query = "INSERT INTO elementos (nombre, descripcion, nserie, estado, prioridad) 
         VALUES(:nombre, :descripcion, :serie, :estado, :prioridad)"; 
         $sentencia = $pdo->prepare($query);
+
         $sentencia->execute(array(
             ":nombre"=>$nombre, 
             ":descripcion"=>$descripcion, 
@@ -23,16 +34,14 @@
         ));
         echo "El registro se ha insertado capo";
 
+        echo json_encode($patata) . "\n";
+
 
     }catch(PDOExcepction $e){
         echo 'Fallo la inserccion capo';
     }
-   
 
 
-
-            
-        
 
 
 
