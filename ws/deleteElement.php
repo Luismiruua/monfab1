@@ -1,18 +1,34 @@
 <?php
     include_once 'conexion.php';
     
-    if(!isset($_GET["id"])) exit();
+    
     $id = $_GET["id"];
-    $query = "DELETE FROM elementos WHERE id = '$id';";
+    $success = true;
+    $message = "Elementos borrados correctamente"; 
+
+
+    $query = "DELETE FROM elementos WHERE id = '$id';";    
+
     $sentencia = $pdo->prepare($query);
     $sentencia->execute();
     $respuesta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-    print_r($respuesta);
 
-    /*if($resultado === TRUE){
-        echo "Eliminado correctamente";
+    $patata = ["success" => $success, "message" => $message, 
+    "data" => $respuesta];
+
+    if($sentencia->execute()){
+
+                
+        echo json_encode(var_dump($patata)) . "\n";
+
+
+    }else{
+        $success = false;
+        $message = "Los elementos no se han poddido obtener de manera correcta";   
+        echo json_encode($patata) . "\n";
+        
     }
-    else{echo "Algo salió mal";} */
+    //print_r($respuesta);
 ?>
 
 ?>
