@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/tabla.css">
+    <script src="./js/nav.js"></script>
     <title>Document</title>
 </head>
+    <nav>
+        
+    </nav>
 
     <body>
         <title>Formulario</title>
@@ -13,24 +18,22 @@
             <h2>Tabla</h2>
         </header>
         <main>
-            <nav>
-                <h2>ÍNDICE</h2>
-                <ul>
-                    <li><a href="tabla.html">Tabla</a></li>
-                    <li><a href="video.html">Video</a></li>
-                    <li><a href="opinion.html">Opinion</a></li>
-                    <li><a href="info.html">informacíon</a></li>
-                    <li><a href="index.html">Principal</a></li>
-                </ul>                
+            <nav class="cositas">
+               
             </nav>
             <br>
             <section id="filtro" onsubmit="filtrar()">
-                <input type="search" id="buscar" onkeyup="mostr()" onkeypress="return (event.charCode >=65 && event.charCode <= 122 || event.charCode == 32)" placeholder="Enviar" ><input type="button" id="env" value="Enviar" onclick="validar()">
+                <div id="cosotas">
+                    <input type="search" id="buscar" onkeyup="mostr()" onkeypress="return (event.charCode >=65 && event.charCode <= 122 || event.charCode == 32)" placeholder="Enviar" ><input type="button" id="env" value="Enviar" onclick="validar()">
+                </div>
                 <table id="tablaDts" border="1">
+                
                 </table>
+                <div id="contenedorForm">
+
+                </div>
                 <script src="./js/script.js"></script>
             </section>
-
         </main>
     </body>
 </html>

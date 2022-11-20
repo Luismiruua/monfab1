@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/index.css">
+        <script src="./js/nav.js"></script>
     </head>
     <body>
         <title>Formulario</title>
@@ -12,37 +14,40 @@
         </header>
         <main>
             <nav>
-                <h2>ÍNDICE</h2>
-                <ul>
-                    <li><a href="tabla.html">Tabla</a></li>
-                    <li><a href="video.html">Video</a></li>
-                    <li><a href="opinion.html">Opinion</a></li>
-                    <li><a href="info.html">informacíon</a></li>
-                    <li><a href="index.html">Principal</a></li>
-                </ul>                
+                
             </nav>
-            <form class="Formulario" action="./ws/createElement.php" method="post">
-                <fieldset>
-                    <legend>Datos</legend>
-                    <img src="./img/usuario.jpg" width="600" height="480">
-                    <p>Nombre: <input type="text" name="nombre" id="nombre" placeholder="Nombre"></p>
-                    <P>Descripción del producto: <input type="textbox" name="descripcion" id="descripcion" placeholder="Descripcion del producto"></p>
-                    <p>Numero de serie: <input type="number" name="serie" id="serie" placeholder="5575983456"></p>
-                </fieldset>
-                <br>
-                <label for="checkb">
-                    <h2>Estado</h2>
-                    <input type="checkbox" name="estados" value="Activo">Activo
-                </label>
-                <div>
-                    <h2>Prioridad</h2>
-                    <label><input type="radio" name="prioridad" value="Alta">Alta</label>
-                    <label><input type="radio" name="prioridad" value="Media">Media</label>    
-                    <label><input type="radio" name="prioridad" value="Baja">Baja</label>
+            <form class="Formulario" id="formu" action="./ws/createElement.php" method="post">
+                <img src="./img/usuario.png" width="600" height="480">
 
+                <div id="izq">
+                    <div id="cajas">
+                        <p>Nombre:</p><input type="text" class="caja" name="nombre" id="nombre">
+                    </div>
+                    <div id="cajas">
+                        <p>Descripción del producto:</p><input type="textbox" class="caja" name="descripcion" id="descripcion">
+                    </div>  
+                    <div id="cajas">  
+                        <p>Numero de serie:</p><input type="number" name="serie" class="caja" id="serie">
+                    </div>  
+                    <div id="cajas">
+                        <label for="checkb">
+                            <p>Estado</p>
+                            <input type="checkbox" name="estados" value="Activo">Activo
+                        </label>
+                    </div>
+                    <br>  
+                    <div id="cajas">
+                        <p>Prioridad</p>
+                        <div id="rd_btn">
+                            <label><input id="btn2" type="radio" name="prioridad" value="Alta">Alta</label>
+                            <label><input type="radio" name="prioridad" value="Media">Media</label>    
+                            <label><input type="radio" name="prioridad" value="Baja">Baja</label>
+                        </div>
+                    </div>  
+                    <br>
                 </div>
-                <br>
                 <input type="submit" name="enviar" value="Enviar datos">
+
             </form>
 
         </main>
