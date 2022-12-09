@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/tabla.css">
     <script src="./js/nav.js"></script>
+    <link rel="stylesheet" href="./css/tabla.css">
+
     <title>Document</title>
 </head>
-    <nav>
-        
-    </nav>
 
     <body>
         <title>Formulario</title>
@@ -18,22 +16,61 @@
             <h2>Tabla</h2>
         </header>
         <main>
-            <nav class="cositas">
-               
+            <nav>
+              
             </nav>
             <br>
             <section id="filtro" onsubmit="filtrar()">
-                <div id="cosotas">
-                    <input type="search" id="buscar" onkeyup="mostr()" onkeypress="return (event.charCode >=65 && event.charCode <= 122 || event.charCode == 32)" placeholder="Enviar" ><input type="button" id="env" value="Enviar" onclick="validar()">
-                </div>
+                <input type="search" id="buscar" onkeyup="mostr()" onkeypress="return (event.charCode >=65 && event.charCode <= 122 || event.charCode == 32)" placeholder="Enviar" ><input type="button" id="env" value="Enviar" onclick="validar()">
                 <table id="tablaDts" border="1">
-                
                 </table>
-                <div id="contenedorForm">
+                <input type="button" id="btn-mst" onclick="mostrForml()" value="Abrir">
 
-                </div>
+                <form id="contenedorForm" style="display: none;">
+                    <ul>
+                        <div id="caja">
+                            <label for="name">Nombre:</label>
+                            <input type="text" name="nombre" class="sobre" id="nom"> 
+                        </div>
+                    
+
+                        <div id="caja">
+                            <label for="descripcion">Descripción del producto:</label>
+                            <input type="textbox" name="descripcion" class="sobre" id="des">  
+                        </div>
+                   
+
+                        <div id="caja">
+                            <label for="serie">Numero de serie:</label>
+                            <input type="number" name="serie" class="sobre" id="ser">
+                        </div>
+                           
+                        <div id="caja">
+                            <label for="name">Estado:</label>
+                            <!--<input type="text" name="estado" class="sobre" id="est">-->
+                            <input type="checkbox" name="estado" >Activo
+
+                        </div>
+
+
+                        <div id="caja">
+                            <label for="name">Prioridad:</label>
+                            <!--<input type="textbox" name="prioridad" class="sobre" id="pri">-->
+                            <input type="radio" name="prioridad" value="Alta">Alta
+                            <input type="radio" name="prioridad" value="Media">Media
+                            <input type="radio" name="prioridad" value="Baja">Baja
+                        </div>
+
+
+                        <button id="btn-acept" onclick='cambiar()'>Guardar</button>
+                   </form>
+
+                </section>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script src="./js/sweetAlert.js"></script>
                 <script src="./js/script.js"></script>
             </section>
+
         </main>
     </body>
 </html>
