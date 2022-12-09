@@ -4,23 +4,20 @@ require './models/element.php';
 
 
 
-    //$element = Element::getById();
+    //tomamos los datos del post del formulario
     $id = $_GET['id'] ?? NUll;
-    $nombre = $_POST['nombre'] ?? NUll;
-    $descripcion = $_POST['descripcion'] ?? NUll;
-    $numSerie = $_POST['serie'] ?? NUll;
-    $estado = $_POST['estado'] ?? NUll;
-    $prioridad = $_POST['prioridad'] ?? NUll;
+
+    //Aqui declaramos dos atributos, para luego ponerlos, eun un arrat
     $success = true;
     $message = "Elementos obtenidos correctamente"; 
 
-   
+    
     try{
-   
+        
         $query = "SELECT * FROM elementos WHERE id = $id;";
         $sentencia = $pdo->prepare($query);
         //$sentencia->bindParam(':id',$id);
-        $sentencia->execute();
+        //$sentencia->execute();
         $respuesta = $sentencia->fetchAll(PDO::FETCH_ASSOC);
         //print_r($respuesta);
 
@@ -28,16 +25,25 @@ require './models/element.php';
         //Se  crea un array donde van a ir todos los datos
             $patata = ["success" => $success, "message" => $message, 
             "data" => $respuesta];
+            //Ejecutamos la sentencia de arriba, y si se ejecuta, imprime la sentencia anterior.
+            if($id != null){
 
-            if($sentencia->execute()){
+                $sentencia->execute();
                 
-                echo json_encode(var_dump($patata)) . "\n";
-        
+                //echo json_encode(var_dump($patata)) . "\n";
+
+                $cositas = json_encode($sentencia->fetchAll(PDO::FETCH_ASSOC),JSON_PRETTY_PRINT);
+                print_r($cositas);
+
             }else{
-                $success = false;
-                $message = "Los elementos no se han podido obtener de manera correcta";   
-                echo json_encode($patata) . "\n";
                 
+                $query2 = "SELECT * FROM elementos";
+                $sentencia = $pdo->prepare($query2);
+                $sentencia->execute();
+                $cositas = json_encode($sentencia->fetchAll(PDO::FETCH_ASSOC),JSON_PRETTY_PRINT);
+                print_r($cositas);
+
+
             }
 
     }catch(PDOException $e){

@@ -105,3 +105,36 @@ Array
     [ estado] => 
     [ prioridad] => 
 )
+Array
+(
+    [nombre ] => 
+    [ descripcion] => 
+    [ numero de serie] => 
+    [ estado] => 
+    [ prioridad] => 
+)
+Array
+(
+    [nombre ] => 
+    [ descripcion] => 
+    [ numero de serie] => 
+    [ estado] => 
+    [ prioridad] => 
+)
+Array
+(
+    [nombre ] => 1
+    [ descripcion] => 1
+    [ numero de serie] => 1
+    [ estado] => 1
+    [ prioridad] => 1
+)
+11111Array
+(
+    [nombre ] => 1
+    [ descripcion] => 1
+    [ numero de serie] => 1
+    [ estado] => 1
+    [ prioridad] => 1
+)
+11111

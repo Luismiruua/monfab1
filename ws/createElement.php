@@ -7,7 +7,7 @@
 
         $numSerie = isset($_POST["serie"]);
 
-        $estado = isset($_POST["estados"]);
+        $estado = isset($_POST["estado"]);
 
         $prioridad = isset($_POST["prioridad"]);
 

@@ -1,11 +1,11 @@
 <?php
     include "./models/element.php";
     include "./conexion.php";
-
+    //Pido lo escrito en el formulario, en las siguientes variables
     $nombre = $_POST['nombre'];
     $descripcion = $_POST['descripcion'];
     $numSerie = $_POST['serie'];
-    $estado = $_POST['estado']='on';
+    $estado = $_POST['estado'] = 'Activo';
     $prioridad = $_POST['prioridad'];
     $success = true;
     $message = 'Se ha podido agregar perfectamente';
@@ -23,6 +23,7 @@
         
         $query = "INSERT INTO elementos (nombre, descripcion, nserie, estado, prioridad) 
         VALUES(:nombre, :descripcion, :serie, :estado, :prioridad)"; 
+        //Iniciamos la sentencia preparada
         $sentencia = $pdo->prepare($query);
 
         $sentencia->execute(array(
@@ -38,6 +39,7 @@
 
 
     }catch(PDOExcepction $e){
+        //Si no puede insertarlo, falla
         echo 'Fallo la inserccion capo';
     }
 
