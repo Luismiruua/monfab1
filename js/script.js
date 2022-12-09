@@ -98,7 +98,7 @@ fetch('http://localhost/daw2/dws/monFab/ws/getElement.php')
 
 
     function eliminarFila(){
-        fetch('./ws/deleteElement.php?id=')
+        fetch(`./ws/deleteElement.php?id={$id}`)
         .then(response => response.json())
         .then(data => {
             function elim(){
@@ -118,63 +118,26 @@ fetch('http://localhost/daw2/dws/monFab/ws/getElement.php')
     // function eliminarFila() {
     //     document.getElementsByTagName("td").remove();
     // }
-
-
-/*fetch('getprdctent.php')
- .then(respuesta => respuesta.json())
- .then(data => {
-    console.log(data);
- })
-//Asincronia de la tabla
-const getprdctentos = () =>{
-    return new Promise((resolve, reject)=>{
-        if(reject===true){
-            reject(new Error(Swal.fire({
-        icon: 'error',
-        title: 'Vaya...',
-        text: 'Algo fue mal padre!',
-})));
-        }
-
-        setTimeout(()=>{
-            resolve 
-            );
-        },1500)
-    })
- 
-}
-async function fetchingData(){
-    try{
-        await getprdctentos();
-    }catch(error){
-        console.log(error.message);
-    }
-
-}
-fetchingData()
-*/
-
-// fetch('http://localhost/daw2/dws/monFab/ws/deleteElement.php') 
-//     .then(response => response.json())
-//     //.then(data => console.log(data));
-//     .then(data => {
-//         let elim =eliminarFila(){    
+let buttonFormulario = document.getElementById("btn-frm");
+    buttonFormulario.onclick = async (e) => {
+        console.log(5678);
+        e.preventDefault();
+        let formuario =document.getElementById('formu')
+        let datos = new FormData(formuario);
+        
+        let response = await fetch(`./ws/createElement2.php`, {
+            method: 'POST',
+            body: datos
+        });
     
-//         var i = document.getprdctentById("tablaDts");
+        let result = await response.json();
+        
+        perfe2(result);
+    };
+
     
-//         i.deleteRow(1);
-//         //document.getprdctentsByTagName("tr")[0].setAttribute('td', "tablaDts");
-//         //document.getprdctentById("tablaDts").deleteRow(i);
     
-//     }})
-
-
-
-    //Aqui se coge cada fila, y al apretar el botón, se elimina una fila.
-
-
-
-
+    
 
 
 
